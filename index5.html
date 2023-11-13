@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<header>
+        <h1>Адвокатська компанія "Юридичні послуги"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index3.html">Контакти</a></li>
+                <li><a href="index5.html">Замовити адвоката</a></li>
+               
+                <link rel="stylesheet" href="styles2.css">
+            </ul>
+        </nav>
+    </header>
+<body>
+    <main>
+        <div class="product-card">
+            <img src="1.jpeg" alt="Продукт 1">
+            <h2>Адвокат Юрій Миколайович </h2>
+            <p>Спеціаліст в Цивільне право</p>
+           <span  class="product-price">Стоємість послуги 2000.00</span>
+            <div class="button-wrapper">
+<a href="index2.html" class="my-stylish-button" target="_blank">Замовити Адвоката</a>
+
+              
+        </div>
+          <div class="product-card">
+            <img src="3.jpeg" alt="Продукт 1">
+            <h2>Адвокат Козаченко Олександр </h2>
+            <p>Спеціаліст в  Кримінальне право</p>
+              <span  class="product-price">Стоємість послуги 2000.00</span>
+            <div class="button-wrapper">
+<a href="index2.html" class="my-stylish-button" target="_blank">Замовити Адвоката</a>
+
+              
+        </div>
+        
+         <div class="product-card">
+            <img src="2.jpeg" alt="Продукт 1">
+            <h2>Адвокат Світлана Мартинюк </h2>
+            <p>Спеціаліст в Сімейне право</p>
+            <span  class="product-price">Стоємість послуги 2000.00</span>
+            <div class="button-wrapper">
+<a href="index2.html" class="my-stylish-button" target="_blank">Замовити Адвоката</a>
+
+              
+        </div>
+        
+         <div class="product-card">
+            <img src="4.jpeg" alt="Продукт 1">
+            <h2>Адвокат Мартинюк Василь </h2>
+            <p>Спеціаліст в Трудове право</p>
+           <span  class="product-price">Стоємість послуги 2000.00</span>
+            <div class="button-wrapper">
+<a href="index2.html" class="my-stylish-button" target="_blank">Замовити Адвоката</a>
+
+              
+        </div>
+
+   
+    </main>
+   
+    
+
+    <script>
+      
+        const cart = [];
+
+       
+        function addToCart(productName, price) {
+            const product = { name: productName, price: price };
+            cart.push(product);
+            updateCart();
+        }
+
+       
+        function updateCart() {
+            const cartItemsList = document.querySelector(".cart-items");
+            const cartTotal = document.querySelector(".cart-total");
+
+          
+            cartItemsList.innerHTML = "";
+
+            let total = 0;
+
+            for (const product of cart) {
+                const li = document.createElement("li");
+                li.textContent = `${product.name} - ${product.price}`;
+                cartItemsList.appendChild(li);
+                total += product.price;
+            }
+
+        
+            cartTotal.textContent = `Загальна сума: ${total}`;
+        }
+
+        
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const productCard = button.parentElement;
+                const productName = productCard.querySelector("h2").textContent;
+                const productPrice = parseFloat(productCard.querySelector(".product-price").textContent.replace("$", ""));
+                addToCart(productName, productPrice);
+            });
+        });
+    </script>
+</body>
+</html>

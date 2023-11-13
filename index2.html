@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення адвоката</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Включити стилі, якщо вони є -->
+    <style>
+        /* Стилі для форми */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left; /* Вирівнювання тексту у формі зліва */
+        }
+
+        /* Стилі для лейблів */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Стилі для введення тексту та текстових областей */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Стилі для кнопки відправки форми */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Адвокатська компанія "Юридичні послуги"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index3.html">Контакти</a></li>
+                <link rel="stylesheet" href="styles2.css">
+            </ul>
+        </nav>
+    </header>
+
+    <section id="order-form">
+        <h2>Замовлення адвоката</h2>
+        <form action="submit_order.php" method="post">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="case-description">Опис справи:</label>
+            <textarea id="case-description" name="case-description" required></textarea>
+
+           
+
+            <label for="meeting-time">Часовий проміжок для зустрічі:</label>
+            <input type="datetime-local" id="meeting-time" name="meeting-time" required>
+
+            <label for="comments">Додаткові питання або коментарі:<textarea id="case-description" name="case-description" required></textarea>
+        
+            <div class="button-wrapper">
+    <a href="index.html" class="my-stylish-button" target="_blank" class="return-button" onclick="goToHome()" >Замовити </a>
+</div>
+                <script>
+    function goToHome() {
+       location.href = "index.html"
+        alert("Дякуєм за замовлення ми оброботаєм замовлення та зателефонуєм вам");
+    }
+</script>
+
+       <footer>
+        © 2023 Адвокатська компанія "Юридичні послуги"
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,153 @@
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #f8f9fa;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #343a40;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+@keyframes slideText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.sliding-text {
+    white-space: nowrap; 
+    overflow: hidden;    
+    animation: slideText 6s linear infinite;
+}
+.button1{
+    margin: 25px;
+    width: 150px;
+    height: 60px;
+    display: inline-block;
+    background: linear-gradient(to top, #BA3909, #4F1D18);
+    background: -webkit- linear-gradient (to top, #BA3999, #4F1D18);
+    background: -moz- linear-gradient(to top, #BA3-909, #4F1D18) ;
+    background: -o- linear-gradient(to top, #BA3909, #4F1D18);
+    background: -ms- linear-gradient(to top, #BA3909, #4F1D18);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    border: 3px solid #8C0909;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0, 0.5);
+    text-align: center;
+    font-size: 25px;
+    color: #f8f7f7;
+    line-height: 60px;
+    text-shadow: 0px 1px black;
+}
+.button1:hover{
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    -o-transform:scale(0.7);
+    -ms-transform:scale(0.7);
+    transform: scale(0.7);
+}
+body1 {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Додаємо відступ внизу */
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideDown 2s ease-out;
+}
+
+#about p {
+    margin-top: 20px; /* Додаємо відступ вгору для тексту під зображенням */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
